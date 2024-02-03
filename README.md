@@ -12,14 +12,14 @@ Only after they were completed I came back to try again the JavaScript approach.
 
 The core idea remained the same across implementations: to simulate the Iterative Prisoner's Dilemma, a classic example in game theory that demonstrates the complexities of cooperative and competitive interactions between rational decision-makers.
 
-The biggest learning by far form this experience has been that the learnings from facing an opponent cannot help (and in fact are harmful) when facing a different opponent with a different strategy. So in order to be succesful I reset weights and clear the memory of the model. I do this by calling `initializeMLStrategy` before each match.
-If there is way to retain all the experience from all the opponents in the model, and "remember" the correct memory after a few moves with a new opponent, I haven't found it.
+The biggest learning by far from this project has been that the experience gained from facing an opponent cannot help (and in fact is harmful) when facing a different opponent with a different strategy. So in order to be succesful I reset weights and clear the memory of the model. I do this by calling `initializeMLStrategy` before each match.
+If there is way to store all the experience from all the opponents in the model, and "remember" the correct memory after a few moves with a new opponent, I haven't found it.
 
-I also heavily impacted the freedom of the ML agent with the knowledge that playing 'D' (DEFECT) might sometimes trigger a very negative game scenario. So in reality, I "unleash" the ML agent only if an opponent plays 'D' first. This approach has pros and cons. It always gets full marks with "nice" strategies such as TFT or or "Always Cooperate", but on the other hand it doesn't get the chance to exploit a strategy such as "Always Cooperate". This is why an overall winner strategy for the IPD game cannot exist. The winner always depends on the arena in which it plays.
+I also heavily impacted the freedom of the ML agent with the knowledge that playing 'D' (DEFECT) might sometimes trigger a very negative game scenario. So in reality, I "unleash" the ML agent only if an opponent plays 'D' first. This approach has pros and cons. It always gets full marks with "nice" strategies such as TFT or "Always Cooperate", but on the other hand it doesn't get the chance to exploit a strategy such as "Always Cooperate". This is why an overall winner strategy for the IPD game cannot exist. The winner always depends on the arena in which it plays.
 
 Once all implementations were completed, I tried to compare their results. Interesting enough, while the Python DQN approach was statistically significantly better than the Python q_table approach (after collecting data from 100 tournaments among the same fixed 9 strategies), the Python DQN implementation and the JavaScript DQN implementation were not statistically significantly different.
 
-Next, maybe, I'll go back to the Python implementation to play with hyperparameters to see if I can improve the peformance of the agent. The current implementation (either Python or JavaScript), in the worst case scenario, ends with 15% less points compared to the winner. Which is good enough for my first attempt at RL.
+Next, maybe, I'll go back to the Python implementation to play with hyperparameters to see if I can improve the peformance of the agent. The current implementation (either Python or JavaScript), is always near the top and, in the worst case scenario, ends with 15% less points compared to the winner. Which is good enough for my first attempt at RL.
 
 ## Project Evolution
 
