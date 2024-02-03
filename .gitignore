@@ -1,0 +1,37 @@
+# Node modules
+node_modules/
+
+# Other common ignores (optional)
+*.log
+*.env
+*.sh
+*.out
+.DS_Store
+*.old.js
+
+# log files
+log/
+
+# pdfs
+PDFs/
+
+# models
+models/
+
+# old files
+old/
+
+# Ignore images case insentive
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.[gG][iI][fF]
+*.[pP][nN][gG]
+*.[wW][eE][bB][pP]
+
+# But not in assets folder
+!/assets/prisoner_dilemma.png
+!/assets/prisoner_dilemma_social_preview.jpg
+!/assets/comparison_q_table_qdn.png
+
+# Exclude the script to run 100 times the same arena to compare q_table and DQN
+!/run_100.sh
